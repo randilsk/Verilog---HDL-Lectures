@@ -5,7 +5,8 @@ module tb();
     reg a; // input register (1 bit)
     wire nota; // output wire (1 bit)
 
-    mynotgate uut(.a(a),.nota(nota)); // instantiate the mynotgate module 
+    mynotgate uut(.a(a),.nota(nota)); // instantiate the mynotgate module . uut-unit under test can be any name
+    // .a and .nota are the names of the ports in the module mynotgate
     // a and nota in brackets are the names of the ports in the module can be different from the names of the signals in the testbench
     initial begin
         a=0; // initialize a to 0
@@ -25,3 +26,10 @@ module tb();
 endmodule
 
 //The testbench is a separate module that instantiates the design under test (DUT) and applies test vectors to it.
+
+//to run the testbench, use the following command in the terminal
+//iverilog -o mynotgate_tb mynotgate.v testbench.v 
+//vvp mynotgate_tb
+//gtkwave.exe .\dump.vcd  //gtkwave.exe is a waveform viewer that can be used to view the simulation results in a graphical format
+
+//gtkwave.exe .\name of the dumping file.vcd
