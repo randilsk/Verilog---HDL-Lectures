@@ -1,0 +1,22 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000023d22f23340 .scope module, "mynotgate" "mynotgate" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "nota";
+o0000023d22f56968 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000023d22f239a0 .functor NOT 1, o0000023d22f56968, C4<0>, C4<0>, C4<0>;
+v0000023d22f23bc0_0 .net "a", 0 0, o0000023d22f56968;  0 drivers
+v0000023d22f234d0_0 .net "nota", 0 0, L_0000023d22f239a0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mynotgate.v";
