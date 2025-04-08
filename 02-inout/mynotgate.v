@@ -55,8 +55,9 @@ always @(*) begin //always block (sensitivity list)
 
     if(a) nota = 0; //if a is 1, nota is 0
     else nota = 1; //if a is 0, nota is 1
-    
+
     //always block is a procedural block that is used to describe the behavior of a circuit
+    
 end
 
 endmodule

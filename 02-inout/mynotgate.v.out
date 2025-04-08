@@ -7,14 +7,29 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_0000023d22f23340 .scope module, "mynotgate" "mynotgate" 2 3;
+S_000001a3708a3450 .scope module, "mynotgate" "mynotgate" 2 48;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /OUTPUT 1 "nota";
-o0000023d22f56968 .functor BUFZ 1, C4<z>; HiZ drive
-L_0000023d22f239a0 .functor NOT 1, o0000023d22f56968, C4<0>, C4<0>, C4<0>;
-v0000023d22f23bc0_0 .net "a", 0 0, o0000023d22f56968;  0 drivers
-v0000023d22f234d0_0 .net "nota", 0 0, L_0000023d22f239a0;  1 drivers
+o000001a3708d6ed8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001a3708a39a0_0 .net "a", 0 0, o000001a3708d6ed8;  0 drivers
+v000001a3708a35e0_0 .var "nota", 0 0;
+E_000001a3708d4cf0 .event anyedge, v000001a3708a39a0_0;
+    .scope S_000001a3708a3450;
+T_0 ;
+    %wait E_000001a3708d4cf0;
+    %load/vec4 v000001a3708a39a0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001a3708a35e0_0, 0, 1;
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001a3708a35e0_0, 0, 1;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
