@@ -1,0 +1,104 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027c48e76110 .scope module, "tb" "tb" 2 4;
+ .timescale -12 -12;
+v0000027c48db9d10_0 .var "a", 0 0;
+v0000027c48db9db0_0 .var "b", 0 0;
+v0000027c48db9e50_0 .var "c", 0 0;
+v0000027c48db9ef0_0 .net "p", 0 0, L_0000027c48db95b0;  1 drivers
+v0000027c48db9f90_0 .net "q", 0 0, L_0000027c48db97e0;  1 drivers
+S_0000027c48e762a0 .scope module, "uut" "intermediatewire" 2 11, 3 1 0, S_0000027c48e76110;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "p";
+    .port_info 4 /OUTPUT 1 "q";
+L_0000027c48db9620 .functor AND 1, v0000027c48db9d10_0, v0000027c48db9db0_0, C4<1>, C4<1>;
+L_0000027c48db95b0 .functor AND 1, L_0000027c48db9620, v0000027c48db9e50_0, C4<1>, C4<1>;
+L_0000027c48db97e0 .functor OR 1, L_0000027c48db9620, v0000027c48db9e50_0, C4<0>, C4<0>;
+v0000027c48db6b80_0 .net "a", 0 0, v0000027c48db9d10_0;  1 drivers
+v0000027c48db6920_0 .net "b", 0 0, v0000027c48db9db0_0;  1 drivers
+v0000027c48ebeee0_0 .net "c", 0 0, v0000027c48db9e50_0;  1 drivers
+v0000027c48e7b980_0 .net "intmwire", 0 0, L_0000027c48db9620;  1 drivers
+v0000027c48e76430_0 .net "p", 0 0, L_0000027c48db95b0;  alias, 1 drivers
+v0000027c48e764d0_0 .net "q", 0 0, L_0000027c48db97e0;  alias, 1 drivers
+    .scope S_0000027c48e76110;
+T_0 ;
+    %vpi_call 2 21 "$monitor", "Time: %0t | a: %b, b: %b, c: %b | p: %b, q: %b", $time, v0000027c48db9d10_0, v0000027c48db9db0_0, v0000027c48db9e50_0, v0000027c48db9ef0_0, v0000027c48db9f90_0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000027c48e76110;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9d10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027c48db9e50_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 37 "$stop" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb.v";
+    "./intermidiatewire.v";

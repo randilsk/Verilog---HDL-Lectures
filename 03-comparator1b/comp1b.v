@@ -64,3 +64,6 @@ always @(*)
     end
 
 endmodule
+
+//left hand side of the assignment operator is a register and right hand side of the assignment operator is a wire
+//always block is a sequential block and it is used to model combinational logic and sequential logic
