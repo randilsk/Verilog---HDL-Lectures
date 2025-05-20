@@ -1,0 +1,114 @@
+$date
+	Tue Apr 29 14:13:29 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! s [7:0] $end
+$var wire 1 " cout $end
+$var reg 8 # a [7:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 1 % cin $end
+$scope module uut $end
+$var wire 8 & a [7:0] $end
+$var wire 8 ' b [7:0] $end
+$var wire 1 % cin $end
+$var wire 8 ( s [7:0] $end
+$var wire 1 " cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10000
+b1 !
+b1 (
+1%
+#20000
+0%
+b1 $
+b1 '
+#30000
+b10 !
+b10 (
+1%
+#40000
+b1 !
+b1 (
+0%
+b0 $
+b0 '
+b1 #
+b1 &
+#50000
+b10 !
+b10 (
+1%
+#60000
+0%
+b1 $
+b1 '
+#70000
+b11 !
+b11 (
+1%
+#80000
+0%
+b10 $
+b10 '
+#90000
+b100 !
+b100 (
+1%
+#100000
+b10 !
+b10 (
+0%
+b0 $
+b0 '
+b10 #
+b10 &
+#110000
+b11 !
+b11 (
+1%
+#120000
+0%
+b1 $
+b1 '
+#130000
+b100 !
+b100 (
+1%
+#140000
+0%
+b10 $
+b10 '
+#150000
+b101 !
+b101 (
+1%
+#160000
+0%
+b11 $
+b11 '
+#170000
+b110 !
+b110 (
+1%
